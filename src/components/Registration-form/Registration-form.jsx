@@ -57,7 +57,7 @@ class RegistrationFormBase extends React.Component {
                     this.props.firebase
                         .storageRef(authUser.user.uid)
                         .put(this.fileInput.files[0]);
-                    this.props.history.push("/");
+                    this.props.router.navigate("/");
                 })
                 .catch(error => {
                     alert(error);

@@ -18,7 +18,7 @@ class LoginFormBase extends React.Component {
         this.props.firebase
             .doSignInWithEmailAndPassword(this.email.value, this.password.value)
             .then(() => {
-                this.props.history.push("/");
+                this.props.router.navigate("/");
             })
             .catch(error => {
                 alert(error);
